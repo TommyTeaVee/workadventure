@@ -3,7 +3,7 @@
 
 {.alert.alert-warning}
 While the information below is still valid, we recommend you to use the new [inline map editor](editor/) to define entries and exits.
-The inline map editor is easier to use and can be accessed directly from WorkAdventure.
+The inline map editor is easier to use and can be accessed directly from Qtune.
 
 [Building your map - Defined entries and exits](https://www.youtube.com/watch?v=MuhVgu8H7U0)
 
@@ -29,11 +29,11 @@ In order to place an exit on your scene that leads to another scene:
 ![](images/exit_layer_map.png)
 
 {.alert.alert-warning}
-**Note:** in older releases of WorkAdventure, you could link to a map file directly using properties `exitSceneUrl` and `exitInstance`. Those properties are now **deprecated**. Use "`exitUrl`" instead.
+**Note:** in older releases of Qtune, you could link to a map file directly using properties `exitSceneUrl` and `exitInstance`. Those properties are now **deprecated**. Use "`exitUrl`" instead.
 
-## Understanding map URLs in WorkAdventure
+## Understanding map URLs in Qtune
 
-There are 2 kinds of URLs in WorkAdventure:
+There are 2 kinds of URLs in Qtune:
 
 *   Public URLs are in the form `https://play.workadventu.re/_/[instance]/[server]/[path to map]`
 *   Private URLs (used in paid accounts) are in the form `https://play.workadventu.re/@/[organization]/[world]/[map]`

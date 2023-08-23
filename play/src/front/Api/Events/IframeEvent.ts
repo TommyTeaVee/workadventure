@@ -62,7 +62,7 @@ export interface TypedMessageEvent<T> extends MessageEvent {
 }
 
 /**
- * List event types sent from an iFrame to WorkAdventure
+ * List event types sent from an iFrame to Qtune
  */
 export const isIframeEventWrapper = z.union([
     z.object({
@@ -450,7 +450,7 @@ export const isLookingLikeIframeEventWrapper = z.object({
 });
 
 /**
- * List event types sent from an iFrame to WorkAdventure that expect a unique answer from WorkAdventure along the type for the answer from WorkAdventure to the iFrame.
+ * List event types sent from an iFrame to Qtune that expect a unique answer from Qtune along the type for the answer from Qtune to the iFrame.
  * Types are defined using Type guards that will actually bused to enforce and check types.
  */
 export const iframeQueryMapTypeGuards = {

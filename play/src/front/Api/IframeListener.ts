@@ -238,9 +238,9 @@ class IframeListener {
                 if (foundSrc === undefined || iframe === undefined) {
                     if (lookingLikeEvent.success) {
                         console.warn(
-                            "It seems an iFrame is trying to communicate with WorkAdventure but was not explicitly granted the permission to do so. " +
-                                "If you are looking to use the WorkAdventure Scripting API inside an iFrame, you should allow the " +
-                                'iFrame to communicate with WorkAdventure by using the "openWebsiteAllowApi" property in your map (or passing "true" as a second' +
+                            "It seems an iFrame is trying to communicate with Qtune but was not explicitly granted the permission to do so. " +
+                                "If you are looking to use the Qtune Scripting API inside an iFrame, you should allow the " +
+                                'iFrame to communicate with Qtune by using the "openWebsiteAllowApi" property in your map (or passing "true" as a second' +
                                 "parameter to WA.nav.openCoWebSite())"
                         );
                     }

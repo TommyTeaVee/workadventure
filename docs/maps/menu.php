@@ -10,7 +10,7 @@ return [
         'editUrl' => 'https://github.com/thecodingmachine/workadventure/edit/develop/docs/maps/build-your-map.md',
     ],
     [
-        'title' => 'WorkAdventure maps',
+        'title' => 'Qtune maps',
         'url' => '/map-building/wa-maps.md',
         'markdown' => 'maps.wa-maps',
         'editUrl' => 'https://github.com/thecodingmachine/workadventure/edit/develop/docs/maps/wa-maps.md',

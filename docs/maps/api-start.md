@@ -1,10 +1,10 @@
 {.section-title.accent.text-primary}
 # API start functions Reference
 
-### Waiting for WorkAdventure API to be available
+### Waiting for Qtune API to be available
 
-When your script / iFrame loads WorkAdventure, it takes a few milliseconds for your script / iFrame to exchange
-data with WorkAdventure. You should wait for the WorkAdventure API to be fully ready using the `WA.onInit()` method.
+When your script / iFrame loads Qtune, it takes a few milliseconds for your script / iFrame to exchange
+data with Qtune. You should wait for the Qtune API to be fully ready using the `WA.onInit()` method.
 
 ```
 WA.onInit(): Promise<void>

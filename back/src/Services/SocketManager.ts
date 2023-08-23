@@ -674,7 +674,7 @@ export class SocketManager {
     }
 
     /**
-     * Computes a unique user/password for the TURN server, using a shared secret between the WorkAdventure API server
+     * Computes a unique user/password for the TURN server, using a shared secret between the Qtune API server
      * and the Coturn server.
      * The Coturn server should be initialized with parameters: `--use-auth-secret --static-auth-secret=MySecretKey`
      */

@@ -1,7 +1,7 @@
 {
   "name": "@workadventure/iframe-api-typings",
   "version": "VERSION_PLACEHOLDER",
-  "description": "Typescript typings for WorkAdventure iFrame API",
+  "description": "Typescript typings for Qtune iFrame API",
   "main": "iframe_api.js",
   "types": "iframe_api.d.ts",
   "repository": "https://github.com/thecodingmachine/workadventure/",

@@ -62,7 +62,7 @@ export const isFetchMemberDataByUuidResponse = z.object({
             "Sets messages that will be displayed when the user logs in to the WA room. These messages are used for ban or ban warning.",
     }),
     anonymous: extendApi(z.boolean().optional(), {
-        description: "Defines whether it is possible to login as anonymous on a WorkAdventure room.",
+        description: "Defines whether it is possible to login as anonymous on a Qtune room.",
         example: false,
     }),
     userRoomToken: extendApi(z.optional(z.string()), { description: "", example: "" }),
@@ -213,7 +213,7 @@ class AdminApi implements AdminInterface {
          *     parameters:
          *      - name: "playUri"
          *        in: "query"
-         *        description: "The full URL of WorkAdventure"
+         *        description: "The full URL of Qtune"
          *        required: true
          *        type: "string"
          *        example: "http://play.workadventure.localhost/@/teamSlug/worldSLug/roomSlug"
@@ -310,7 +310,7 @@ class AdminApi implements AdminInterface {
          *        type: "string"
          *      - name: "playUri"
          *        in: "query"
-         *        description: "The full URL of WorkAdventure"
+         *        description: "The full URL of Qtune"
          *        required: true
          *        type: "string"
          *        example: "http://play.workadventure.localhost/@/teamSlug/worldSLug/roomSlug"
@@ -398,7 +398,7 @@ class AdminApi implements AdminInterface {
          *        type: "string"
          *      - name: "playUri"
          *        in: "query"
-         *        description: "The full URL of WorkAdventure"
+         *        description: "The full URL of Qtune"
          *        required: true
          *        type: "string"
          *        example: "http://play.workadventure.localhost/@/teamSlug/worldSLug/roomSlug"

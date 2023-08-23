@@ -6,11 +6,11 @@ The [Getting Started](.) page proposes to use a "starter kit" that is relying on
 But using GitHub pages is not necessary. You can host your maps on any webserver.
 
 {.alert.alert-warning}
-If you decide to host your maps on your own webserver, you must **configure CORS headers** in your browser to allow access from WorkAdventure.
+If you decide to host your maps on your own webserver, you must **configure CORS headers** in your browser to allow access from Qtune.
 
 ## Configuring CORS headers
 
-CORS headers ([Cross Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) are useful when a website want to make some resources accessible to another website. This is exactly what we want to do. We want the map you are designing to be accessible from the WorkAdventure domain (`play.workadventu.re`).
+CORS headers ([Cross Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)) are useful when a website want to make some resources accessible to another website. This is exactly what we want to do. We want the map you are designing to be accessible from the Qtune domain (`play.workadventu.re`).
 
 {.alert.alert-warning}
 If you are using the "scripting API", only allowing the `play.workadventu.re` will not be enough. You will need to allow `*`

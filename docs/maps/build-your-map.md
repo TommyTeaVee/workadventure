@@ -1,7 +1,7 @@
 {.section-title.accent.text-primary}
 # Create your map
 
-This document will guide you through the process of creating your own map for WorkAdventure using the **Tiled** editor.
+This document will guide you through the process of creating your own map for Qtune using the **Tiled** editor.
 
 {.alert.alert-info}
 If you are looking to do a simple customization of an existing map, like placing furniture or editing entries and
@@ -9,13 +9,13 @@ exits, you should read the [Customize your map](editor/access.md) guide instead.
 
 ## Tools you will need
 
-In order to build your own map for WorkAdventure, you need:
+In order to build your own map for Qtune, you need:
 
 *   the [Tiled editor](https://www.mapeditor.org/) software
 *   "tiles" (i.e. images) to create your map
 *   a web-server to serve your map
 
-WorkAdventure comes with a "map starter kit" that we recommend using to start designing your map quickly. It contains **a good default tileset** for building an office and it proposes to **use Github static pages as a web-server** which is both free and performant. It also comes with a local webserver for testing purpose and with Typescript support (if you are looking to use the [map scripting API](scripting.md).
+Qtune comes with a "map starter kit" that we recommend using to start designing your map quickly. It contains **a good default tileset** for building an office and it proposes to **use Github static pages as a web-server** which is both free and performant. It also comes with a local webserver for testing purpose and with Typescript support (if you are looking to use the [map scripting API](scripting.md).
 
 {.alert.alert-info}
 If you are looking to host your maps on your own webserver, be sure to read the [Self-hosting your map](hosting.md) guide.
@@ -59,7 +59,7 @@ Wait a few minutes... Github will deploy a new website with the content of the r
     <figcaption class="figure-caption">Your website is ready!</figcaption>
 </figure>
 
-Click on the link. You should be redirected directly to WorkAdventure, on your map!
+Click on the link. You should be redirected directly to Qtune, on your map!
 
 ## Customizing your map
 
@@ -103,7 +103,7 @@ This command will start the webserver and open the welcome page. You should see 
     <figcaption class="figure-caption">The welcome page of the "map start kit"</figcaption>
 </figure>
 
-From here, you simply need to click the "Test this map" button to test your map in WorkAdventure.
+From here, you simply need to click the "Test this map" button to test your map in Qtune.
 
 {.alert.alert-warning}
 The local web server can only be used to test your map locally. In particular, the link will only work on your computer. You cannot share it with other people.
@@ -114,7 +114,7 @@ When your changes are ready, you need to "commit" and "push" (i.e. "upload") the
 
 ## Testing your map
 
-To test your map, you need to find its URL. There are 2 kinds of URLs in WorkAdventure:
+To test your map, you need to find its URL. There are 2 kinds of URLs in Qtune:
 
 *   Test URLs are in the form `https://play.workadventu.re/_/[instance]/[server]/[path to map]`
 *   Registered URLs are in the form `https://play.workadventu.re/@/[organization]/[world]/[map]`
@@ -126,9 +126,9 @@ This will connect you to a "public" instance. Anyone can come and connect to a p
 <div class="card">
     <div class="card-body">
         <h3 id="need-some-help">Need some help?</h3>
-        <p>WorkAdventure is a constantly evolving project and there is plenty of room for improvement regarding map editing.</p>
+        <p>Qtune is a constantly evolving project and there is plenty of room for improvement regarding map editing.</p>
         <p>If you are facing any troubles, do not hesitate to open an "issue" in the
-            <a href="https://github.com/thecodingmachine/workadventure/issues" target="_blank">GitHub WorkAdventure account</a>.
+            <a href="https://github.com/thecodingmachine/workadventure/issues" target="_blank">GitHub Qtune account</a>.
         </p>
     </div>
 </div>

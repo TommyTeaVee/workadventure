@@ -120,7 +120,7 @@
     </div>
     {#if logo !== logoImg && gameManager.currentStartedRoom.showPoweredBy !== false}
         <section class="text-right tw-flex powered-by tw-justify-center tw-items-end">
-            <img src={poweredByWorkAdventureImg} alt="Powered by WorkAdventure" class="tw-h-14" />
+            <img src={poweredByWorkAdventureImg} alt="Powered by Qtune" class="tw-h-14" />
         </section>
     {/if}
 </form>

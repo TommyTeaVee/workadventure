@@ -1,45 +1,45 @@
-# Self-hosting WorkAdventure
+# Self-hosting Qtune
 
 ## Do you need self-hosting?
 
-WorkAdventure is a powerful and versatile platform that enables users to create immersive and interactive virtual 
-environments for remote collaboration, events, and games. As an open project, WorkAdventure offers users the flexibility 
-and freedom to host the platform on their own servers. However, self-hosting WorkAdventure requires technical expertise, 
+Qtune is a powerful and versatile platform that enables users to create immersive and interactive virtual 
+environments for remote collaboration, events, and games. As an open project, Qtune offers users the flexibility 
+and freedom to host the platform on their own servers. However, self-hosting Qtune requires technical expertise, 
 infrastructure, and maintenance, which may not be feasible or practical for all users.
 
-In order to self-host WorkAdventure, you will need:
+In order to self-host Qtune, you will need:
 
-- at least one server for WorkAdventure, with a public facing IP and a DNS name
-- in addition, WorkAdventure requires to have 2 additional services: Jitsi and Coturn. In a typical setup, those services will be hosted on 2 additional servers (both with a public facing IP address and a DNS name)
+- at least one server for Qtune, with a public facing IP and a DNS name
+- in addition, Qtune requires to have 2 additional services: Jitsi and Coturn. In a typical setup, those services will be hosted on 2 additional servers (both with a public facing IP address and a DNS name)
 - a strong technical expertise regarding Docker and containers
 - a good understanding of networking concepts
 - ... and time (!), to keep up with the updates (about once a month)
 
-Depending on your use-case, you might want to check the SAAS (i.e. hosted) version of WorkAdventure.
+Depending on your use-case, you might want to check the SAAS (i.e. hosted) version of Qtune.
 It provides:
 
 - **Fast and easy setup**: with just a few clicks, you can sign up, create your first virtual space, invite your team or friends, and start exploring and collaborating in real-time
-- **Automatic upgrades**: you don't have to worry about upgrading the platform yourself. WorkAdventure is a fast-evolving 
+- **Automatic upgrades**: you don't have to worry about upgrading the platform yourself. Qtune is a fast-evolving 
   technology, with frequent updates, bug fixes, and new features. The SAAS version takes care of all the upgrades and ensures that you always have access to the latest and greatest version of the platform.
 - **An advanced dashboard**: you can manage your virtual spaces, users, and get fine-grained access rights from the dashboard. 
   You can also create and manage your own custom domains and logos.
-- **Lower costs and resources**: While self-hosting WorkAdventure may seem like a cost-effective option at first glance, 
+- **Lower costs and resources**: While self-hosting Qtune may seem like a cost-effective option at first glance, 
   it can quickly become expensive and resource-intensive in the long run. Self-hosting requires not only server hardware 
   but also bandwidth, storage, and maintenance costs. Moreover, self-hosting requires technical expertise, time, and 
-  effort to set up, configure, and troubleshoot the infrastructure. The SAAS version of WorkAdventure, on the other hand,
+  effort to set up, configure, and troubleshoot the infrastructure. The SAAS version of Qtune, on the other hand,
   offers a pay-as-you-go pricing model that scales with your usage and needs. You only pay for what you use (no need for those costly video servers),
   and you don't have to worry about upfront investments, hidden fees, or unpredictable costs. And most importantly,
-  you contribute to making WorkAdventure a sustainable product 👍
+  you contribute to making Qtune a sustainable product 👍
 
-Also, the WorkAdventure SAAS version provides a generous free-plan. Head over at https://workadventu.re to start right away.
+Also, the Qtune SAAS version provides a generous free-plan. Head over at https://workadventu.re to start right away.
 
 Still interested in self-hosting? All right! Read below.
 
-## A high level view of a WorkAdventure environment
+## A high level view of a Qtune environment
 
-In order to host WorkAdventure you will need to host:
+In order to host Qtune you will need to host:
 
-- **WorkAdventure** itself
+- **Qtune** itself
 - **Coturn**: this is a service that proxies the WebRTC video signal in case a user is on a network that does not allow
   peer-to-peer connections. Coturn is optional, but without Coturn, approximately 15% of the users will fail to establish 
   a audio/video connection.
@@ -49,33 +49,33 @@ In order to host WorkAdventure you will need to host:
 flowchart LR
   
     subgraph Servers
-    WorkAdventure
+    Qtune
     Jitsi
     Coturn
     end
     Browser1["Your browser"]
-    Browser1-->WorkAdventure
+    Browser1-->Qtune
     Browser1-->Jitsi
     Browser1-->Coturn
 ```
 
 > **Warning**:
-> In the rest of this document, we will describe how to install the WorkAdventure server. We will leave Jitsi
+> In the rest of this document, we will describe how to install the Qtune server. We will leave Jitsi
 > and Coturn installs out of scope.
 
 Jitsi install guide: https://jitsi.github.io/handbook/docs/devops-guide/
 Coturn install guide: https://meetrix.io/blog/webrtc/coturn/installation.html
 
-## Installation method for the WorkAdventure server
+## Installation method for the Qtune server
 
-WorkAdventure is a set of different programs. There are countless ways of hosting WorkAdventure. In the past, we have
-seen people using Ansible, NixOS or Kubernetes to host WorkAdventure. You can host each component on a different
+Qtune is a set of different programs. There are countless ways of hosting Qtune. In the past, we have
+seen people using Ansible, NixOS or Kubernetes to host Qtune. You can host each component on a different
 domain name of run a "single-domain" install. The core maintainers of this project cannot possibly support all possible 
 installation methods.
 
 So we are maintaining ONE installation method:
 
-**WorkAdventure works as a set of Docker containers.**
+**Qtune works as a set of Docker containers.**
 **We provide Docker images for each container in the Docker hub registry, and a docker-compose file to easily start the containers.**
 **The proposed install runs on a single domain (you will still need 2 additional domain names for Jitsi and Coturn).**
 **We assume you have one physical server with root access and Docker installed. The server has a public IP address.**
@@ -86,8 +86,8 @@ Of course, every production environment is different and this docker-compose fil
 fit all use cases. The file is yours. Fill free to modify it. Fill free to use it as a starting point to host the 
 solution on Kubernetes if you want.
 
-If you have specific needs for a custom deployment, the WorkAdventure company can offer paid support. Don't hesitate to
-contact us at hello@workadventu.re. We also provide support to integrate WorkAdventure in your existing application.
+If you have specific needs for a custom deployment, the Qtune company can offer paid support. Don't hesitate to
+contact us at hello@workadventu.re. We also provide support to integrate Qtune in your existing application.
 
 Alternatively, for any question related to non-standard deployments, you can ask the community on the "self-hosting" Discord
 channel: [![Discord](https://img.shields.io/discord/821338762134290432?label=Discord)](https://discord.gg/G6Xh9ZM9aR)
@@ -98,13 +98,13 @@ In order to perform the install, you will need a server, with a domain name poin
 
 A relatively small server (2 CPUs, 4GB RAM) will allow you to host meetings with up to 300 concurrent users.
 
-The WorkAdventure server itself does not need many resources. However, the Coturn and Jitsi servers will need to be
+The Qtune server itself does not need many resources. However, the Coturn and Jitsi servers will need to be
 much more powerful, as they are handling the video streams. See the Jitsi and Coturn documentation for correctly
 sizing those servers.
 
 > **Warning**:
-> WorkAdventure uses WebRTC for audio/video connections. WebRTC in turns, require an HTTPS connection with a valid
-> certificate. As a result, you need a domain name pointing on your server. You cannot access WorkAdventure directly
+> Qtune uses WebRTC for audio/video connections. WebRTC in turns, require an HTTPS connection with a valid
+> certificate. As a result, you need a domain name pointing on your server. You cannot access Qtune directly
 > by the server IP address, as the HTTPS certificate can only be issued for a domain name.
 
 ## The default install structure
@@ -113,7 +113,7 @@ The default docker-compose file is available here: [`docker-compose.prod.yaml`](
 
 In this docker-compose file, you will find:
 
-- A reverse-proxy (Traefik) that dispatches requests to the WorkAdventure containers and handles HTTPS termination. HTTPS certificates will be automatically generated using LetsEncrypt.
+- A reverse-proxy (Traefik) that dispatches requests to the Qtune containers and handles HTTPS termination. HTTPS certificates will be automatically generated using LetsEncrypt.
 - A play container (NodeJS) that serves static files for the "game" (HTML/JS/CSS) and is the point of entry for users (you can start many if you want to increase performance)
 - A chat container (nginx) that serves static files for the chat bar (HTML/JS/CSS)
 - A back container (NodeJS) that shares your rooms information
@@ -140,8 +140,8 @@ graph LR
 ```
 
 > **Note**
-> You can host your maps on the WorkAdventure server itself (using the dedicated map-storage container), or outside
-> of the WorkAdventure server, on any [properly configured HTTP server](../../docs/maps/hosting.md) (Nginx, Apache...). 
+> You can host your maps on the Qtune server itself (using the dedicated map-storage container), or outside
+> of the Qtune server, on any [properly configured HTTP server](../../docs/maps/hosting.md) (Nginx, Apache...). 
 > The default docker-compose file does **not** contain a container dedicated to hosting maps. The documentation and
 
 > **Note**
@@ -158,7 +158,7 @@ graph LR
 ## Getting started
 
 > **Note**
-> These installation instructions are for production only. If you are looking to install WorkAdventure
+> These installation instructions are for production only. If you are looking to install Qtune
 > on you local development machine, head over to the [main README](../../README.md).
 
 ### 1. Install Docker
@@ -176,7 +176,7 @@ Edit the `.env` file.
 
 For your environment to start, you will need to at least configure:
 
-- **VERSION**: the version of WorkAdventure to install. See below for more information.
+- **VERSION**: the version of Qtune to install. See below for more information.
 - **SECRET_KEY**: a random key used to generate JWT secrets
 - **DOMAIN**: your domain name (without any "https://" prefix)
 - **MAP_STORAGE_AUTHENTICATION_USER**: the username for the map-storage container 
@@ -219,7 +219,7 @@ docker-compose logs -f
 
 ### 5. Uploading your first map
 
-Before starting using WorkAdventure, you will need to upload your first map.
+Before starting using Qtune, you will need to upload your first map.
 
 Open your browser and go to `https://<your-domain>/map-storage/`.
 
@@ -242,28 +242,28 @@ Assuming your ZIP file contains a map named `somedir/my-map.tmj`, you can connec
 
 `https://<your-domain>/~/somedir/my-map.tmj`
 
-Are you connected? Congratulations! Share the URL with your friends and start using WorkAdventure!
+Are you connected? Congratulations! Share the URL with your friends and start using Qtune!
 
 Not working? Jump to the [troubleshooting section](#troubleshooting).
 
 ### Post-installation steps
 
-You can now customize your WorkAdventure instance by modifying the `.env` file.
+You can now customize your Qtune instance by modifying the `.env` file.
 
 Please be sure to configure Jitsi, as it is the default video conferencing solution for large room,
 and Turn settings to ensure video is correctly relayed, even if your clients are in a restricted network.
 
 Keeping your server secure is also important. You can configure the `SECURITY_EMAIL` environment variable
-to receive security notifications from the WorkAdventure core team.
-You will be notified if your WorkAdventure version contains a known security flaw.
+to receive security notifications from the Qtune core team.
+You will be notified if your Qtune version contains a known security flaw.
 
-If you want to connect WorkAdventure to an authentication provider, you can follow the [OpenID Connect documentation](../../docs/dev/openid.md).
+If you want to connect Qtune to an authentication provider, you can follow the [OpenID Connect documentation](../../docs/dev/openid.md).
 
 Finally, you can set up a list of restricted users [allowed to access the inline map editor](../../docs/dev/inline-map-editor.md).
 
-## Upgrading WorkAdventure
+## Upgrading Qtune
 
-The upgrade path will depend on the installation of WorkAdventure you are using.
+The upgrade path will depend on the installation of Qtune you are using.
 
 #### If you are using the `docker-compose.prod.yaml` file without any changes:
 

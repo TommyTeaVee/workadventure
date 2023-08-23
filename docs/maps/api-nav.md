@@ -21,7 +21,7 @@ WA.nav.openTab('https://www.wikipedia.org/');
 WA.nav.goToPage(url: string): void
 ```
 
-Opens the webpage at "url" in your browser in place of WorkAdventure. WorkAdventure will be completely unloaded.
+Opens the webpage at "url" in your browser in place of Qtune. Qtune will be completely unloaded.
 
 Example:
 

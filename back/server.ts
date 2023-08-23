@@ -19,7 +19,7 @@ import { spaceManager } from "./src/SpaceManager";
 if (ENABLE_TELEMETRY) {
     telemetryService.startTelemetry().catch((e) => console.error(e));
 }
-App.listen(HTTP_PORT, () => console.log(`WorkAdventure HTTP API starting on port %d!`, HTTP_PORT));
+App.listen(HTTP_PORT, () => console.log(`Qtune HTTP API starting on port %d!`, HTTP_PORT));
 
 // Sentry integration
 if (SENTRY_DSN != undefined) {
@@ -46,6 +46,6 @@ server.bindAsync(`0.0.0.0:${GRPC_PORT}`, grpc.ServerCredentials.createInsecure()
     if (err) {
         throw err;
     }
-    console.log("WorkAdventure HTTP/2 API starting on port %d!", GRPC_PORT);
+    console.log("Qtune HTTP/2 API starting on port %d!", GRPC_PORT);
     server.start();
 });

@@ -9,7 +9,7 @@ to all participants in the map.
 
 ## Configuring the megaphone
 
-To configure the megaphone feature in WorkAdventure, follow the steps below.
+To configure the megaphone feature in Qtune, follow the steps below.
 Please note that [access to the map editor](access.md) is required to perform these configurations.
 
 Megaphone settings will affect the entire map.

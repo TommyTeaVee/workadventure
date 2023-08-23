@@ -163,8 +163,8 @@ export class FrontController extends BaseHttpController {
         this.app.get("/server.json", (req: Request, res: Response) => {
             return res.json({
                 domain: process.env.PUSHER_URL,
-                name: process.env.SERVER_NAME || "WorkAdventure Server",
-                motd: process.env.SERVER_MOTD || "A WorkAdventure Server",
+                name: process.env.SERVER_NAME || "Qtune Server",
+                motd: process.env.SERVER_MOTD || "A Qtune Server",
                 icon: process.env.SERVER_ICON || process.env.PUSHER_URL + "/static/images/favicons/icon-512x512.png",
                 version: version + (process.env.NODE_ENV !== "production" ? "-dev" : ""),
             });

@@ -51,7 +51,7 @@ export const isErrorApiRetryData = extendApi(
     subtitle: extendApi(z.string(), {
       description:
         "Subtitle displayed to let the user know what is the main subject of the error.",
-      example: "Too successful, your WorkAdventure world is full!",
+      example: "Too successful, your Qtune world is full!",
     }),
     details: extendApi(z.string(), {
       description:

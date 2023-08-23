@@ -1,12 +1,12 @@
 {
   "name": "@workadventure/tailwind",
   "version": "1.0.0",
-  "description": "Tailwind Theme for WorkAdventure",
+  "description": "Tailwind Theme for Qtune",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "WorkAdventure",
+  "author": "Qtune",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.7"

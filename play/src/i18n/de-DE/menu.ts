@@ -48,7 +48,7 @@ const menu: DeepPartial<Translation["menu"]> = {
         },
         privacySettings: {
             title: "Abwesenheitsmodus",
-            explanation: "Falls der WorkAdventure Tab nicht aktiv ist, wird in den „Abwesenheitsmodus“ umgeschaltet.",
+            explanation: "Falls der Qtune Tab nicht aktiv ist, wird in den „Abwesenheitsmodus“ umgeschaltet.",
             cameraToggle: "Kamera im „Abwesenheitsmodus“ aktiviert lassen.",
             microphoneToggle: "Mikrofon im „Abwesenheitsmodus“ aktiviert lassen.",
         },
@@ -85,7 +85,7 @@ const menu: DeepPartial<Translation["menu"]> = {
         gettingStarted: {
             title: "Erste Schritte",
             description:
-                "Mit WorkAdventure kannst du eine Onlinewelt erschaffen in der du dich spontan mit Anderen treffen und unterhalten kannst. Erstelle als erstes deine eigene Karte. Es steht dir eine große Auswahl an vorgefertigten Karten von unserem Team zur Verfügung.",
+                "Mit Qtune kannst du eine Onlinewelt erschaffen in der du dich spontan mit Anderen treffen und unterhalten kannst. Erstelle als erstes deine eigene Karte. Es steht dir eine große Auswahl an vorgefertigten Karten von unserem Team zur Verfügung.",
         },
         createMap: {
             title: "Eigene Karte erstellen ",

@@ -4,7 +4,7 @@ import {evaluateScript} from "./utils/scripting";
 
 test.describe('Button in action bar', () => {
     test('test', async ({ page }) => {
-        // Go to WorkAdventure platform
+        // Go to Qtune platform
         await page.goto(
             'http://play.workadventure.localhost/_/global/maps.workadventure.localhost/tests/E2E/empty.json'
         );
@@ -33,7 +33,7 @@ test.describe('Button in action bar', () => {
 
 test.describe('Action button in action bar', () => {
     test('test', async ({ page }) => {
-        // Go to WorkAdventure platform
+        // Go to Qtune platform
         await page.goto(
             'http://play.workadventure.localhost/_/global/maps.workadventure.localhost/tests/E2E/empty.json'
         );

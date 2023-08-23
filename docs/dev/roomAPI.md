@@ -6,11 +6,11 @@ The Room API is a gRPC-based API that allows an external server to connect to a 
 
 The Room API is a **server to server** API. If you are looking for a "client to server" API (for instance to add a dynamic behavior to a map), look at the scripting API.
 
-The Room API is **not** designed to create rooms or to manage members or authorizations on who can enter a room. If you are looking for an API to do this, look for the AdminAPI (in self-hosted mode) or the [inbound](https://workadventu.re/admin-guide/inbound-api) or [outbound API](https://workadventu.re/admin-guide/outbound-api) if you are using the WorkAdventure SAAS version.
+The Room API is **not** designed to create rooms or to manage members or authorizations on who can enter a room. If you are looking for an API to do this, look for the AdminAPI (in self-hosted mode) or the [inbound](https://workadventu.re/admin-guide/inbound-api) or [outbound API](https://workadventu.re/admin-guide/outbound-api) if you are using the Qtune SAAS version.
 
-In WorkAdventure, the state of a room is stored in [variables](../maps/variables.md). You can bind those variables to some objects state (for instance to the fact that a door is closed or opened). Or you can use the scripting API to react to variables change.
+In Qtune, the state of a room is stored in [variables](../maps/variables.md). You can bind those variables to some objects state (for instance to the fact that a door is closed or opened). Or you can use the scripting API to react to variables change.
 
-The Room API lets you monitor those room variables, but also allows you to edit them. Through variables, you can therefore establish a 2-ways data channel between your server and what happens in a WorkAdventure room.
+The Room API lets you monitor those room variables, but also allows you to edit them. Through variables, you can therefore establish a 2-ways data channel between your server and what happens in a Qtune room.
 
 ```mermaid
 flowchart LR
@@ -34,7 +34,7 @@ The [gRPC protocol](https://grpc.io/) provides an API that is self-documented (u
 
 ## Setup on self hosting
 
-If you want to use the API on your self-hosted WorkAdventure server you must define the following environment variable in your .env file :
+If you want to use the API on your self-hosted Qtune server you must define the following environment variable in your .env file :
 
 | Variable name | Description | Example |
 | ------- | -------- | -------- |
@@ -45,7 +45,7 @@ If you want to use the API on your self-hosted WorkAdventure server you must def
 The hostname and the port to access the Room API depends on your setup :
 | Setup                                      | Hostname | Port |
 |-|-|-|
-| WorkAdventure SAAS | `room-api.workadventu.re` | 443 |
+| Qtune SAAS | `room-api.workadventu.re` | 443 |
 | Self-hosted | Depends on your setup. See your `docker-compose.yaml` file.
 | Local environment (dev) | `room-api.workdventure.localhost` | 80 |
 
@@ -55,11 +55,11 @@ The hostname and the port to access the Room API depends on your setup :
 ## Authentication
 Authentication to the API is done by passing a **X-API-Key** header in the gRPC metadata on each call to the API.
 
-Depending if you are using a self hosted install or the SAAS version of WorkAdventure, you will use a different method to authenticate.
+Depending if you are using a self hosted install or the SAAS version of Qtune, you will use a different method to authenticate.
 
 If you are using the SAAS please refer to the [SAAS Room API authentication documentation](https://workadventu.re/admin-guide/room-api).
 
-If you are using a self-hosted WorkAdventure server, you have just to send the secret key defined on the **ROOM_API_SECRET_KEY** environnement variable, on the **X-API-Key** GRPC metadata on each call.
+If you are using a self-hosted Qtune server, you have just to send the secret key defined on the **ROOM_API_SECRET_KEY** environnement variable, on the **X-API-Key** GRPC metadata on each call.
 
 ## Client libraries
   - **TypeScript / JavaScript** : [@workadventure/room-api-client](https://www.npmjs.com/package/@workadventure/room-api-client)

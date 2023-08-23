@@ -317,7 +317,7 @@ WA.ui.modal.closeModal(): void
 
 ```ts
 WA.ui.modal.openModal({
-    title: "WorkAdventure website",
+    title: "Qtune website",
     src: 'https://workadventu.re',
     allow: "fullscreen",
     allowApi: true,
@@ -338,7 +338,7 @@ Open modal to the center position:
 
 ```ts
     WA.ui.modal.openModal({
-        title: "WorkAdventure website",
+        title: "Qtune website",
         src: 'https://workadventu.re',
         allow: "fullscreen",
         position: "right"
@@ -357,7 +357,7 @@ Open modal to the left position:
 
 ```ts
     WA.ui.modal.openModal({
-        title: "WorkAdventure website",
+        title: "Qtune website",
         src: 'https://workadventu.re',
         position: "left"
     });
@@ -500,7 +500,7 @@ interface AddButtonActionBar {
 ## Open / Close banner
 
 {.alert.alert-warning}
-The open/close banner API is **experimental**. It means the compatibility with future versions of WorkAdventure is not 
+The open/close banner API is **experimental**. It means the compatibility with future versions of Qtune is not 
 guaranteed and we might break the signature of these methods at any moment. Use at your own risk.
 
 ### Open the banner

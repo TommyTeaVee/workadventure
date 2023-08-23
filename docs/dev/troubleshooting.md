@@ -6,7 +6,7 @@ Unlike with Windows and Linux, MacOS developers need to configure an amount of R
 to Docker. If some containers are "Killed", you will need to increase the amount of RAM given
 to Docker. At least 6GB of RAM is needed.
 
-If the performance is poor, you can also try to [run WorkAdventure inside Vagrant](docs/dev/vagrant.md).
+If the performance is poor, you can also try to [run Qtune inside Vagrant](docs/dev/vagrant.md).
 
 ## Windows users
 
@@ -21,11 +21,11 @@ If you run into this issue, please run the command:
 git config --global core.autocrlf false
 ```
 
-Then, delete the WorkAdventure directory and check it out again.
+Then, delete the Qtune directory and check it out again.
 
 ## CORS error / HTTP 502 error
 
-If you see a CORS error or an HTTP 502 error when trying to load WorkAdventure, check the logs from the `play`
+If you see a CORS error or an HTTP 502 error when trying to load Qtune, check the logs from the `play`
 and from the `back` container. If you see an error, you can simply try to restart them.
 Sometimes, a rare race condition prevents those containers from starting correctly in dev.
 
@@ -36,7 +36,7 @@ docker-compose restart back
 
 ## Increasing the log level
 
-WorkAdventure uses the ["debug" package](https://github.com/debug-js/debug) to manage
+Qtune uses the ["debug" package](https://github.com/debug-js/debug) to manage
 configurable log levels.
 
 In the front container, if you want to increase the log level, you need set the "debug" key of your localstorage:

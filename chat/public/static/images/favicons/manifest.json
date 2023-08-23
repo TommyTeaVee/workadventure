@@ -1,6 +1,6 @@
 {
     "short_name": "WA",
-    "name": "WorkAdventure",
+    "name": "Qtune",
     "icons": [
         {
             "src": "/static/images/favicons/apple-icon-57x57.png",
@@ -128,12 +128,12 @@
       {
         "name": "WorkAdventures",
         "short_name": "WA",
-        "description": "WorkAdventure application",
+        "description": "Qtune application",
         "url": "/",
         "icons": [{ "src": "/static/images/favicons/android-icon-192x192.png", "sizes": "192x192", "type": "image/png" }]
       }
     ],
-    "description": "WorkAdventure application",
+    "description": "Qtune application",
     "screenshots": [],
     "related_applications": [{
         "platform": "web",

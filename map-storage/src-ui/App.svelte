@@ -70,7 +70,7 @@
 </script>
 
 <main>
-    <h1>WorkAdventure MapStorage</h1>
+    <h1>Qtune MapStorage</h1>
 
     {#await responsePromise}
         <p>Loading maps list...</p>

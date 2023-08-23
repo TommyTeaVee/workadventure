@@ -4,7 +4,7 @@ The desktop component is an electron app inside `./electron/`. It uses a hybrid 
 - A `local-app` bundled into the electron app with two main parts:
   - A sidebar to show the server list, with the currently selected server
   - A main page which is used to manage servers and to show other "local" pages like the desktop-app settings
-- A BrowserView (often called `appView` or `app`) showing the actual frontend of an external WorkAdventure deployment.
+- A BrowserView (often called `appView` or `app`) showing the actual frontend of an external Qtune deployment.
   If a server is selected the BrowserView / `appView` is overlaying the whole main part right to the sidebar.
 
 ## Development

@@ -336,7 +336,7 @@ export class IoSocketController {
                                         image: "/resources/icons/new_version.png",
                                         code: "NEW_VERSION",
                                         details:
-                                            "A new version of WorkAdventure is available. Please refresh your window",
+                                            "A new version of Qtune is available. Please refresh your window",
                                         canRetryManual: true,
                                         buttonTitle: "Refresh",
                                         timeToRetry: 999999,

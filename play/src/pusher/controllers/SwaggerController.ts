@@ -13,7 +13,7 @@ export class SwaggerController extends BaseHttpController {
                 swaggerDefinition: {
                     openapi: "3.0.0",
                     info: {
-                        title: "WorkAdventure Pusher",
+                        title: "Qtune Pusher",
                         version: "1.0.0",
                     },
                 },
@@ -29,10 +29,10 @@ export class SwaggerController extends BaseHttpController {
                     swagger: "2.0",
                     //openapi: "3.0.0",
                     info: {
-                        title: "WorkAdventure Pusher",
+                        title: "Qtune Pusher",
                         version: "1.0.0",
                         description:
-                            "This is a documentation about the endpoints called by the pusher. \n You can find out more about WorkAdventure on [github](https://github.com/thecodingmachine/workadventure).",
+                            "This is a documentation about the endpoints called by the pusher. \n You can find out more about Qtune on [github](https://github.com/thecodingmachine/workadventure).",
                         contact: {
                             email: "hello@workadventu.re",
                         },
@@ -66,10 +66,10 @@ export class SwaggerController extends BaseHttpController {
                 swagger: "2.0",
                 //openapi: "3.0.0",
                 info: {
-                    title: "WorkAdventure External Admin",
+                    title: "Qtune External Admin",
                     version: "1.0.0",
                     description:
-                        "This is a documentation about the external endpoints called by the pusher (aka the Admin API). \n Those endpoints should be implemented by the Admin API. The pusher will access those endpoints (just like webhooks). You can find out more about WorkAdventure and the Admin API on [GitHub](https://github.com/thecodingmachine/workadventure/blob/develop/docs/dev/adminAPI.md).",
+                        "This is a documentation about the external endpoints called by the pusher (aka the Admin API). \n Those endpoints should be implemented by the Admin API. The pusher will access those endpoints (just like webhooks). You can find out more about Qtune and the Admin API on [GitHub](https://github.com/thecodingmachine/workadventure/blob/develop/docs/dev/adminAPI.md).",
                     contact: {
                         email: "hello@workadventu.re",
                     },
@@ -101,7 +101,7 @@ export class SwaggerController extends BaseHttpController {
                                 {
                                     name: "playUri",
                                     in: "query",
-                                    description: "The full URL of WorkAdventure",
+                                    description: "The full URL of Qtune",
                                     required: true,
                                     type: "string",
                                     example: "http://example.com/@/teamSlug/worldSLug/roomSlug",
@@ -135,7 +135,7 @@ export class SwaggerController extends BaseHttpController {
                                 {
                                     name: "playUri",
                                     in: "query",
-                                    description: "The full URL of WorkAdventure",
+                                    description: "The full URL of Qtune",
                                     required: true,
                                     type: "string",
                                     example: "http://example.com/@/teamSlug/worldSLug/roomSlug",

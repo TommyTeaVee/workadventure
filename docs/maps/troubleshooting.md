@@ -15,8 +15,8 @@ If you are hosting the map you built on your own webserver and if the map does n
 
 ## Issues embedding a website
 
-When you are embedding a website in WorkAdventure (whether it is using the [`openWebsite` property](opening-a-website.md) or
-the [integrated website in a map](website-in-map.md) feature or the [Scripting API](scripting.md)), WorkAdventure
+When you are embedding a website in Qtune (whether it is using the [`openWebsite` property](opening-a-website.md) or
+the [integrated website in a map](website-in-map.md) feature or the [Scripting API](scripting.md)), Qtune
 will open your website using an iFrame.
 
 Browsers have various security measures in place, and website owners can use those measures to prevent websites from 
@@ -40,8 +40,8 @@ Below is what you can see when opening a Youtube video page:
 
 ![](images/x-frame-options.png)
 
-`X-Frame-Options: DENY` or `X-Frame-Options: SAMEORIGIN` will prevent WorkAdventure from loading the page.
-`Content-Security-Policy` header have also the potential to prevent WorkAdventure from loading the page.
+`X-Frame-Options: DENY` or `X-Frame-Options: SAMEORIGIN` will prevent Qtune from loading the page.
+`Content-Security-Policy` header have also the potential to prevent Qtune from loading the page.
 
 If the website you are trying to embed has one of these headers set, here are your options:
 
@@ -65,7 +65,7 @@ The `SameSite` attribute can take these values: "Lax", "Strict" or "None". The o
 cookie inside an iFrame is "None".
 
 {.alert.alert-info}
-The `SameSite` attribute of your cookie MUST be set to "None" if you want to be able to use this cookie from an iFrame inside WorkAdventure.
+The `SameSite` attribute of your cookie MUST be set to "None" if you want to be able to use this cookie from an iFrame inside Qtune.
 
 **Default values**:
 
@@ -86,9 +86,9 @@ If the website you are trying to embed has the `SameSite` attribute set to a val
 ## Need some help?
 
 <div class="card bg-red text-white"><div class="card-body">
-        <p>WorkAdventure is a constantly evolving project and there is plenty of room for improvement regarding map editing.</p>
+        <p>Qtune is a constantly evolving project and there is plenty of room for improvement regarding map editing.</p>
         <p>If you are facing any troubles, do not hesitate to seek help in 
             <a href="https://discord.gg/G6Xh9ZM9aR">our Discord server</a> or open an "issue" in the
-            <a href="https://github.com/thecodingmachine/workadventure/issues" target="_blank">GitHub WorkAdventure account</a>.
+            <a href="https://github.com/thecodingmachine/workadventure/issues" target="_blank">GitHub Qtune account</a>.
         </p>
 </div></div>

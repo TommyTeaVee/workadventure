@@ -869,7 +869,7 @@ export class GameScene extends DirtyScene {
             })
             .catch((e) =>
                 console.error(
-                    "Some scripts failed to load ot the connection failed to establish to WorkAdventure server",
+                    "Some scripts failed to load ot the connection failed to establish to Qtune server",
                     e
                 )
             );
@@ -3040,7 +3040,7 @@ ${escapedMessage}
                 type: "error",
                 code: "USER_BANNED",
                 title: "BANNED",
-                subtitle: "You were banned from WorkAdventure",
+                subtitle: "You were banned from Qtune",
                 details: "If you want more information, you may contact us at: hello@workadventu.re",
             })
         );

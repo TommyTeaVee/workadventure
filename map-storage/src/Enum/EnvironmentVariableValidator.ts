@@ -59,7 +59,7 @@ const BasicEnvironmentVariables = z.object({
         .describe(
             "The (optional) API token to use when calling the webhook. The token will be sent in the Authorization header of the POST request."
         ),
-    SENTRY_DSN: z.string().optional().describe("If set, WorkAdventure will send errors to Sentry"),
+    SENTRY_DSN: z.string().optional().describe("If set, Qtune will send errors to Sentry"),
     SENTRY_RELEASE: z
         .string()
         .optional()
