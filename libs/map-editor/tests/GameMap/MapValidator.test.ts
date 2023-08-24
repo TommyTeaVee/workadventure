@@ -157,7 +157,7 @@ describe("Map validator", () => {
 
         expect(errors.map[0].message).toBe("The tiles on your map are not the same size as the characters.");
         expect(errors.map[0].details).toBe(
-            "Your tiles are 16x16 pixels wide, but characters in WorkAdventure are 32x32 pixels. The characters will appear larger or smaller than your tiles. We recommend using tiles of 32x32 pixels."
+            "Your tiles are 16x16 pixels wide, but characters in Qtune are 32x32 pixels. The characters will appear larger or smaller than your tiles. We recommend using tiles of 32x32 pixels."
         );
         expect(errors.map[0].type).toBe("warning");
     });
@@ -200,7 +200,7 @@ describe("Map validator", () => {
 
         expect(errors.layers[0].message).toBe('Could not find a layer whose name is "start".');
         expect(errors.layers[0].details).toBe(
-            'WorkAdventure uses this "start" layer as a starting position for incoming players. Without a "start" layer, players will appear in the middle of the map.'
+            'Qtune uses this "start" layer as a starting position for incoming players. Without a "start" layer, players will appear in the middle of the map.'
         );
         expect(errors.layers[0].type).toBe("warning");
     });

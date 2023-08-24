@@ -65,7 +65,7 @@ const setIframeId = (data: string | undefined) => {
     _iframeId = data;
 };
 
-// Notify WorkAdventure that we are ready to receive data
+// Notify Qtune that we are ready to receive data
 const initPromise = queryWorkadventure({
     type: "getState",
     data: undefined,
@@ -98,8 +98,8 @@ const wa = {
     state: globalState,
 
     /**
-     * When your script / iFrame loads WorkAdventure, it takes a few milliseconds for your
-     * script / iFrame to exchange data with WorkAdventure. You should wait for the WorkAdventure
+     * When your script / iFrame loads Qtune, it takes a few milliseconds for your
+     * script / iFrame to exchange data with Qtune. You should wait for the Qtune
      * API to be fully ready using the WA.onInit() method.
      * {@link https://workadventu.re/map-building/api-start.md#waiting-for-workadventure-api-to-be-available | Website documentation}
      *
@@ -320,7 +320,7 @@ window.addEventListener("message", (message: TypedMessageEvent<unknown>) => {
             const safeLooksLikeResponse = isLookingLikeIframeEventWrapper.safeParse(payload);
             if (safeLooksLikeResponse.success) {
                 throw new Error(
-                    "Could not parse message received from WorkAdventure. Message:" + JSON.stringify(payload)
+                    "Could not parse message received from Qtune. Message:" + JSON.stringify(payload)
                 );
             }
         }

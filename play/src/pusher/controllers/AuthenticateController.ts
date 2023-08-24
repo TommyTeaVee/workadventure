@@ -215,7 +215,7 @@ export class AuthenticateController extends BaseHttpController {
                 const authTokenData: AuthTokenData = jwtTokenManager.verifyJWTToken(token, false);
 
                 //Get user data from Admin Back Office
-                //This is very important to create User Local in LocalStorage in WorkAdventure
+                //This is very important to create User Local in LocalStorage in Qtune
                 const resUserData = await adminService.fetchMemberDataByUuid(
                     authTokenData.identifier,
                     authTokenData.accessToken,
@@ -459,7 +459,7 @@ export class AuthenticateController extends BaseHttpController {
      * @openapi
      * /anonymLogin:
      *   post:
-     *     description: Generates an "anonymous" JWT token allowing to connect to WorkAdventure anonymously.
+     *     description: Generates an "anonymous" JWT token allowing to connect to Qtune anonymously.
      *     responses:
      *       200:
      *         description: The details of the logged user

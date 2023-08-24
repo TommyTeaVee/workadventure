@@ -11,7 +11,7 @@ export const isCapabilities = z.object({
         example: "v1",
     }),
     "api/domain/verify": extendApi(z.optional(z.string()), {
-        description: "Means the api can validate if a domain is a legitimate domain. Needed if you do OAuth login AND your WorkAdventure install supports multiple domains.",
+        description: "Means the api can validate if a domain is a legitimate domain. Needed if you do OAuth login AND your Qtune install supports multiple domains.",
         example: "v1",
     }),
 });

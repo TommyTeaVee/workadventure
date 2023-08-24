@@ -1,7 +1,7 @@
 {.section-title.accent.text-primary}
 # Variables
 
-WorkAdventure offers several options for storing data. In WorkAdventure as in many programming languages, data
+Qtune offers several options for storing data. In Qtune as in many programming languages, data
 is stored in variables.
 
 There are 2 kind of variables:
@@ -40,7 +40,7 @@ You can set a default value for the object in the `default` property.
 ## Persisting room variables state
 
 Use the `persist` property to save the state of the variable in database. If `persist` is false, the variable will stay
-in the memory of the WorkAdventure servers but will be wiped out of the memory as soon as the room is empty (or if the
+in the memory of the Qtune servers but will be wiped out of the memory as soon as the room is empty (or if the
 server restarts).
 
 {.alert.alert-info}
@@ -52,15 +52,15 @@ With `readableBy` and `writableBy`, you control who can read of write in this va
 representing a "tag". Anyone having this "tag" can read/write in the variable.
 
 {.alert.alert-warning}
-`readableBy` and `writableBy` are specific to the "online" version of WorkAdventure because the notion of tags
-is not available unless you have an "admin" server (that is not part of the self-hosted version of WorkAdventure).
+`readableBy` and `writableBy` are specific to the "online" version of Qtune because the notion of tags
+is not available unless you have an "admin" server (that is not part of the self-hosted version of Qtune).
 
 In a future release, the `jsonSchema` property will contain [a complete JSON schema](https://json-schema.org/) to validate the content of the variable.
 Trying to set a variable to a value that is not compatible with the schema will fail.
 
 ## Using room variables
 
-There are plenty of ways to use variables in WorkAdventure:
+There are plenty of ways to use variables in Qtune:
 
 - Using the [scripting API](api-state.md), you can read, edit or track the content of variables.
 - Using the [Action zones](https://workadventu.re/map-building-extra/generic-action-zones.md), you can set the value of a variable when someone is entering or leaving a zone
@@ -90,6 +90,6 @@ Use [`WA.player.state`](api-player.md#player-specific-variables) to read or writ
 Use [`WA.players` along with `RemotePlayer.state`](api-players.md#remote-players-variables) to read the variables of nearby players.
 
 {.alert.alert-warning}
-Player variables can be read only when the player is connected. WorkAdventure does not offer a way to fetch the list
+Player variables can be read only when the player is connected. Qtune does not offer a way to fetch the list
 of all players, only of current players. This means player variables are not well suited for systems such as a "leader board" where the best score
 should be persisted even when the best player left the game.

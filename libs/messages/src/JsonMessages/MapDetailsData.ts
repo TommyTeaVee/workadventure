@@ -5,11 +5,6 @@ import { isMetaTagManifestIcon } from "./MetaTagManifestIcon";
 import { OpidWokaNamePolicy } from "./OpidWokaNamePolicy";
 import { MucRoomDefinition } from "./MucRoomDefinition";
 
-/*
- * WARNING! The original file is in /messages/JsonMessages.
- * All other files are automatically copied from this file on container startup / build
- */
-
 const isBbbData = z.object({
     url: extendApi(z.string(), {
         description: 'The full URL to your BigBlueButton server. Do not forget the trailing "/bigbluebutton/".',
@@ -46,24 +41,24 @@ const isMapThirdPartyData = z.object({
 
 const MetaTagsData = z.object({
     // Meta tags values
-    title: extendApi(z.string().optional().default("WorkAdventure"), {
+    title: extendApi(z.string().optional().default("Qtune"), {
         description: "Title shown on browser tab",
-        example: "WorkAdventure - My Awesome World",
+        example: "Qtune - My Awesome World",
     }),
     description: extendApi(
         z.string().optional().default("Create your own digital office, Metaverse and meet online with the world."),
         {
             description: "Description of the webpage",
-            example: "My awesome world in WorkAdventure",
+            example: "My awesome world in Qtune",
         }
     ),
-    author: extendApi(z.string().optional().default("WorkAdventure team"), {
+    author: extendApi(z.string().optional().default("Qtune team"), {
         description: "Author of the webpage",
         example: "My Awesome team",
     }),
-    provider: extendApi(z.string().optional().default("WorkAdventure"), {
+    provider: extendApi(z.string().optional().default("Qtune"), {
         description: "Provider of the webpage",
-        example: "WorkAdventure SAAS plateform",
+        example: "Qtune SAAS plateform",
     }),
     favIcons: extendApi(isMetaTagFavicon.array().optional(), {
         description: "Icon to load inside the index.html and on the manifest",
@@ -71,7 +66,7 @@ const MetaTagsData = z.object({
     manifestIcons: isMetaTagManifestIcon.array().optional(),
     appName: extendApi(z.string().optional(), {
         description: "Name display on the PWA",
-        example: "WorkAdventure",
+        example: "Qtune",
     }),
     shortAppName: extendApi(z.string().optional(), {
         description: "PWA name when there not enough space",
@@ -139,7 +134,7 @@ export const isMapDetailsData = z.object({
         example: true,
     }),
     group: extendApi(z.string().nullable(), {
-        description: 'The group this room is part of (maps the notion of "world" in WorkAdventure SAAS)',
+        description: 'The group this room is part of (maps the notion of "world" in Qtune SAAS)',
         example: "myorg/myworld",
     }),
     mucRooms: extendApi(MucRoomDefinition.array().nullable(), {

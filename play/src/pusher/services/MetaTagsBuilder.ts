@@ -15,10 +15,10 @@ import { ADMIN_API_URL } from "../enums/EnvironmentVariable";
 import { adminService } from "./AdminService";
 
 export const MetaTagsDefaultValue: RequiredMetaTagsData = {
-    title: "WorkAdventure",
+    title: "Qtune",
     description: "Create your own digital office, Metaverse and meet online with the world.",
-    author: "WorkAdventure team",
-    provider: "WorkAdventure",
+    author: "Qtune team",
+    provider: "Qtune",
     favIcons: [
         {
             rel: "icon",
@@ -192,7 +192,7 @@ export const MetaTagsDefaultValue: RequiredMetaTagsData = {
             type: "image/png",
         },
     ],
-    appName: "WorkAdventure",
+    appName: "Qtune",
     shortAppName: "WA",
     themeColor: "#000000",
     cardImage: "https://workadventu.re/images/general/logo-og.png",

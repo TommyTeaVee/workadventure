@@ -9,7 +9,7 @@ function launchBanner(){
         textColor: "#ffffff",
         closable: true,
         link: {
-            label: "WorkAdventure ",
+            label: "Qtune ",
             url: "https://workadventu.re"
         }
     });

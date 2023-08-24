@@ -1,4 +1,4 @@
-# Configure the chat of WorkAdventure
+# Configure the chat of Qtune
 
 ## Ejabberd
 ### Some explanation

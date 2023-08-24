@@ -26,8 +26,8 @@ When a user clicks on the object, a pop-up is displayed with the list of possibl
 
 Possible actions are:
 
-- **[Opening a link](property/open-link.md)**: Opens a webpage, either inside WorkAdventure or in a new tab of the browser.
-- **[Opening a videoconference](property/jitsi.md)**: Opens a Jitsi videoconference inside WorkAdventure. You could for instance attach 
+- **[Opening a link](property/open-link.md)**: Opens a webpage, either inside Qtune or in a new tab of the browser.
+- **[Opening a videoconference](property/jitsi.md)**: Opens a Jitsi videoconference inside Qtune. You could for instance attach 
   a videoconference to a phone or a phonebooth inside your map that would connect you to a Jitsi room in another
   part of the map.
 - **[Play an audio file](property/play-sound.md)**: Plays an audio file. Useful for Jukeboxes!
@@ -37,9 +37,9 @@ Possible actions are:
 When placing objects on the map, you can place most objects in a "pixel perfect" way.
 If you hold the SHIFT key, objects will be "snapped" to the grid.
 
-WorkAdventure will force any "colliding" objects to be snapped to the grid. This means that if an object cannot be
-traversed (like a table), WorkAdventure will make it snap to the grid. This is a limitation of the physics engine
-used internally by WorkAdventure.
+Qtune will force any "colliding" objects to be snapped to the grid. This means that if an object cannot be
+traversed (like a table), Qtune will make it snap to the grid. This is a limitation of the physics engine
+used internally by Qtune.
 
 ## Deleting an object
 

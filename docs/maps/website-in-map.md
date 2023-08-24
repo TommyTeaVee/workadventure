@@ -19,7 +19,7 @@ To do this in Tiled:
 The `url` can be absolute, or relative to your map.
 
 {.alert.alert-info}
-Internally, WorkAdventure will create an "iFrame" to load the website.
+Internally, Qtune will create an "iFrame" to load the website.
 Some websites forbid being opened by iframes using the [`X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
 HTTP header.
 
@@ -29,7 +29,7 @@ contains the "website" object under the tiles).
 
 ## Allowing the scripting API in your iframe
 
-If you are planning to use the WorkAdventure scripting API inside your iframe, you need
+If you are planning to use the Qtune scripting API inside your iframe, you need
 to explicitly allow it, by setting an additional `allowApi` property to `true`.
 
 <div>

@@ -1,11 +1,6 @@
 import { z } from "zod";
 import { extendApi } from "@anatine/zod-openapi";
 
-/*
- * WARNING! The original file is in /messages/JsonMessages.
- * All other files are automatically copied from this file on container startup / build
- */
-
 export const isErrorApiErrorData = extendApi(
   z.object({
     type: z.literal("error"),
@@ -56,7 +51,7 @@ export const isErrorApiRetryData = extendApi(
     subtitle: extendApi(z.string(), {
       description:
         "Subtitle displayed to let the user know what is the main subject of the error.",
-      example: "Too successful, your WorkAdventure world is full!",
+      example: "Too successful, your Qtune world is full!",
     }),
     details: extendApi(z.string(), {
       description:

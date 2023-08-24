@@ -11,7 +11,7 @@ You can load a script:
 ## Script restrictions
 
 If you load a script using the `script` property in your map properties (solution 1), you need to understand that
-WorkAdventure will generate an iframe, and will load the script inside this iframe.
+Qtune will generate an iframe, and will load the script inside this iframe.
 
 Things you should know:
 

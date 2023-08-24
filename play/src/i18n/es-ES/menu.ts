@@ -49,7 +49,7 @@ const menu: DeepPartial<Translation["menu"]> = {
         privacySettings: {
             title: "Modo no presente",
             explanation:
-                'Cuando la pestaña de WorkAdventure en su navegador no es visible, WorkAdventure cambia a "modo no presente"',
+                'Cuando la pestaña de Qtune en su navegador no es visible, Qtune cambia a "modo no presente"',
             cameraToggle: 'Mantener la cámara activa en "modo no presente"',
             microphoneToggle: 'Mantener el micrófono activa en "modo no presente"',
         },
@@ -86,7 +86,7 @@ const menu: DeepPartial<Translation["menu"]> = {
         gettingStarted: {
             title: "Empezar",
             description:
-                "WorkAdventure le permite crear un espacio en línea para comunicarse espontáneamente con otros. Y todo empieza creando su propio espacio. Escoja de una gran selección de mapas prefabricados por nuestro equipo.",
+                "Qtune le permite crear un espacio en línea para comunicarse espontáneamente con otros. Y todo empieza creando su propio espacio. Escoja de una gran selección de mapas prefabricados por nuestro equipo.",
         },
         createMap: {
             title: "Crear su mapa",

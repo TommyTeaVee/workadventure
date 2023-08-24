@@ -1,5 +1,5 @@
 {.section-title.accent.text-primary}
-# Scripting WorkAdventure maps
+# Scripting Qtune maps
 
 Do you want to add a bit of intelligence to your map? Scripts allow you to create maps with special features.
 
@@ -10,7 +10,7 @@ You can for instance:
 *   Organize interactions between an iframe and your map (for instance, walking on a special zone might add a product in the cart of an eCommerce website...)
 *   etc...
 
-Please note that scripting in WorkAdventure is at an early stage of development and that more features might be added in the future. You can actually voice your opinion about useful features by adding [an issue on Github](https://github.com/thecodingmachine/workadventure/issues).
+Please note that scripting in Qtune is at an early stage of development and that more features might be added in the future. You can actually voice your opinion about useful features by adding [an issue on Github](https://github.com/thecodingmachine/workadventure/issues).
 
 {.alert.alert-warning}
 **Beware:** Scripts are executed in the browser of the current user only. Generally speaking, scripts cannot be used to trigger a change that will be displayed on other users screen.
@@ -22,7 +22,7 @@ Client-side scripting is done in **Javascript** (or any language that transpiles
 There are 2 ways you can use the scripting language:
 
 *   **In the map**: By directly referring a Javascript file inside your map, in the `script` property of your map.
-*   **In an iFrame**: By placing your Javascript script into an iFrame, your script can communicate with the WorkAdventure game
+*   **In an iFrame**: By placing your Javascript script into an iFrame, your script can communicate with the Qtune game
 
 ## Adding a script in the map
 
@@ -55,7 +55,7 @@ Start by testing this with a simple message sent to the chat.
 WA.chat.sendChatMessage('Hello world', 'Mr Robot');
 ```
 
-The `WA` objects contains a number of useful methods enabling you to interact with the WorkAdventure game. For instance, `WA.chat.sendChatMessage` opens the chat and adds a message in it.
+The `WA` objects contains a number of useful methods enabling you to interact with the Qtune game. For instance, `WA.chat.sendChatMessage` opens the chat and adds a message in it.
 
 The message should be displayed in the chat history as soon as you enter the room.
 
@@ -77,11 +77,11 @@ check out the ["scripting internals" documentation](scripting-internals.md).
 
 ## Adding a script in an iFrame
 
-In WorkAdventure, you can easily [open an iFrame using the `openWebsite` property on a layer](special-zones). However, by default, the iFrame is not allowed to communicate with WorkAdventure.
+In Qtune, you can easily [open an iFrame using the `openWebsite` property on a layer](special-zones). However, by default, the iFrame is not allowed to communicate with Qtune.
 
-This is done to improve security. In order to be able to execute a script that communicates with WorkAdventure inside an iFrame, you have to **explicitly allow the iFrame to use the "iFrame API"**.
+This is done to improve security. In order to be able to execute a script that communicates with Qtune inside an iFrame, you have to **explicitly allow the iFrame to use the "iFrame API"**.
 
-In order to allow communication with WorkAdventure, you need to add an additional property: `openWebsiteAllowApi`. This property must be _boolean_ and you must set it to "true".
+In order to allow communication with Qtune, you need to add an additional property: `openWebsiteAllowApi`. This property must be _boolean_ and you must set it to "true".
 
 <div>
     <figure class="figure">
@@ -90,11 +90,11 @@ In order to allow communication with WorkAdventure, you need to add an additiona
     </figure>
 </div>
 
-In your iFrame HTML page, you now need to import the _WorkAdventure client API Javascript library_. This library contains the `WA` object that you can use to communicate with WorkAdventure.
+In your iFrame HTML page, you now need to import the _WorkAdventure client API Javascript library_. This library contains the `WA` object that you can use to communicate with Qtune.
 
 The library is available at `https://play.workadventu.re/iframe_api.js`.
 
-_Note:_ if you are using a self-hosted version of WorkAdventure, use `https://[front_domain]/iframe_api.js`
+_Note:_ if you are using a self-hosted version of Qtune, use `https://[front_domain]/iframe_api.js`
 
 **iframe.html**
 ```html

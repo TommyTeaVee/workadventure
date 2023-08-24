@@ -1,7 +1,7 @@
 
 # @workadventure/room-api-client
 
-Easily create a GRPC client to connect your service to the [Room API](https://github.com/thecodingmachine/workadventure/blob/master/docs/master/roomAPI.md) of a [WorkAdventure](https://workadventu.re) server.
+Easily create a GRPC client to connect your service to the [Room API](https://github.com/thecodingmachine/workadventure/blob/master/docs/master/roomAPI.md) of a [Qtune](https://workadventu.re) server.
 
 
 ## Installation
@@ -16,7 +16,7 @@ Easily create a GRPC client to connect your service to the [Room API](https://gi
 import { createRoomApiClient } from "@workadventure/room-api-client";
 
 /**
- * By default, the client targets the official WorkAdventure server,
+ * By default, the client targets the official Qtune server,
  * but you can also define customs domain and port.
  * Example :
  * const client = createRoomApiClient("My AWESOME KEY", "mydomain.net", "5221");

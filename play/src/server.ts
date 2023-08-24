@@ -42,7 +42,7 @@ if (SENTRY_DSN != undefined) {
     await app.init();
 
     app.listen(PUSHER_HTTP_PORT)
-        .then(() => console.log(`WorkAdventure Pusher started on port ${PUSHER_HTTP_PORT}!`))
+        .then(() => console.log(`Qtune Pusher started on port ${PUSHER_HTTP_PORT}!`))
         .catch((e) => {
             console.error(e);
             Sentry.captureException(e);

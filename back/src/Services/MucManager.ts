@@ -91,7 +91,7 @@ export class MucManager {
                 if (object.type === "area") {
                     if (object.template) {
                         console.warn(
-                            'Warning, a variable object is using a Tiled "template". WorkAdventure does not support objects generated from Tiled templates.'
+                            'Warning, a variable object is using a Tiled "template". Qtune does not support objects generated from Tiled templates.'
                         );
                         continue;
                     }

@@ -16,7 +16,7 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc"
   },
-  "author": "WorkAdventure",
+  "author": "Qtune",
   "license": "ISC",
   "dependencies": {
     "@workadventure/map-editor": "1.0.0",

@@ -47,7 +47,7 @@
         transition:fly={{ y: -200, duration: 500 }}
     >
         <div class="tw-flex tw-flex-col tw-items-center" style="width: 90%;">
-            <div class="logo"><img src={logo} alt="WorkAdventure" /></div>
+            <div class="logo"><img src={logo} alt="Qtune" /></div>
             <div class="icon"><img src={error} alt="Error logo" /></div>
             {#if $errorScreenStore.type !== "retry"}<h2>{$errorScreenStore.title}</h2>{/if}
             {#if $errorScreenStore.subtitle}<p>{$errorScreenStore.subtitle}</p>{/if}

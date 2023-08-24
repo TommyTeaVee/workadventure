@@ -1,5 +1,5 @@
 {.section-title.accent.text-primary}
-# Animating WorkAdventure maps
+# Animating Qtune maps
 
 A tile can run an animation in loops, for example to render water or blinking lights. Each animation frame is a single 
 32x32 tile. To create an animation, edit the tileset in Tiled and click on the tile to animate (or pick a free tile to 

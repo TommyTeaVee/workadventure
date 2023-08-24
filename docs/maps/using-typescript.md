@@ -30,7 +30,7 @@ From there, you should be able to use Typescript in your project.
 
 ## The long story
 
-Below is a step by step guide explaining how to set up Typescript + Webpack along your WorkAdventure map.
+Below is a step by step guide explaining how to set up Typescript + Webpack along your Qtune map.
 
 In your map directory, start by adding a `package.json` file. This file will contain dependencies on Webpack, Typescript and the Workadventure typings:
 
@@ -79,7 +79,7 @@ module.exports = {
     devtool: 'inline-source-map',
     devServer: {
         // The test webserver serves static files from the root directory.
-        // It comes with CORS enabled (important for WorkAdventure to be able to load the map)
+        // It comes with CORS enabled (important for Qtune to be able to load the map)
         static: {
             directory: ".",
             serveIndex: true,

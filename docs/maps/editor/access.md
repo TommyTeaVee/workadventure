@@ -1,6 +1,6 @@
 # Inline map editor
 
-The map editor is a tool built into WorkAdventure that allows you to quickly place objects, furniture, and define areas 
+The map editor is a tool built into Qtune that allows you to quickly place objects, furniture, and define areas 
 of interest within your map.
 
 {.alert.alert-info}
@@ -24,7 +24,7 @@ In order to create a member of your world with the "admin" or the "editor" tag, 
 [corresponding documentation](/admin-guide/manage-members).
 
 {.alert.alert-warning}
-If you are using a self-hosted version of WorkAdventure, please [read this guide](https://github.com/workadventure/workadventure/blob/master/docs/dev/self-hosted-access.md) to access the map editor.
+If you are using a self-hosted version of Qtune, please [read this guide](https://github.com/workadventure/workadventure/blob/master/docs/dev/self-hosted-access.md) to access the map editor.
 
 ## Map editor tools
 

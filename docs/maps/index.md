@@ -1,9 +1,9 @@
 {.section-title.accent.text-primary}
 # Editing maps
 
-Welcome to the WorkAdventure map editing documentation!
+Welcome to the Qtune map editing documentation!
 
-This guide will provide you with instructions on how to edit and create maps for WorkAdventure, allowing you to 
+This guide will provide you with instructions on how to edit and create maps for Qtune, allowing you to 
 customize your virtual spaces and create engaging interactive experiences. There are two primary methods for editing 
 maps: using the inline editor and utilizing Tiled.
 

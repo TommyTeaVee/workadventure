@@ -61,7 +61,7 @@ const mapEditor: BaseTranslation = {
         },
         linkProperties: {
             label: "Open Link",
-            description: "Open website within WorkAdventure or as a new tab.",
+            description: "Open website within Qtune or as a new tab.",
             linkLabel: "Link URL",
             newTabLabel: "Open in new tab",
             trigger: "Interaction",

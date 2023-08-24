@@ -1,7 +1,7 @@
 {
   "name": "workadventure-artillery",
   "version": "1.0.0",
-  "description": "Load testing for WorkAdventure",
+  "description": "Load testing for Qtune",
   "scripts": {
     "start": "ts-node ./index.ts"
   },

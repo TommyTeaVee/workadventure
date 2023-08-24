@@ -115,7 +115,7 @@ test.describe('Chat', () => {
       await Chat.AT_deleteFile(page);
 
       /*
-      // TODO later : Manage admin in live zone based on our WorkAdventure role
+      // TODO later : Manage admin in live zone based on our Qtune role
       await chat.locator('#activeThread #settings').click();
       // Rank up user
       // Workaround to wait the end of svelte animation

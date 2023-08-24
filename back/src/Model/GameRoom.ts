@@ -808,7 +808,7 @@ export class GameRoom implements BrothersFinder {
                             for (const roomListener of this.roomListeners) {
                                 emitErrorOnRoomSocket(
                                     roomListener,
-                                    "Your map does not seem accessible from the WorkAdventure servers. Is it behind a firewall or a proxy? Your map should be accessible from the WorkAdventure servers. If you use the scripting API in this map, please be aware that server-side checks and variable persistence is disabled."
+                                    "Your map does not seem accessible from the Qtune servers. Is it behind a firewall or a proxy? Your map should be accessible from the Qtune servers. If you use the scripting API in this map, please be aware that server-side checks and variable persistence is disabled."
                                 );
                             }
                         }, 1000);
@@ -896,7 +896,7 @@ export class GameRoom implements BrothersFinder {
                         for (const roomListener of this.roomListeners) {
                             emitErrorOnRoomSocket(
                                 roomListener,
-                                "Your map does not seem accessible from the WorkAdventure servers. Is it behind a firewall or a proxy? Your map should be accessible from the WorkAdventure servers. The 'jitsiRoomAdminTag' property cannot be read from local maps."
+                                "Your map does not seem accessible from the Qtune servers. Is it behind a firewall or a proxy? Your map should be accessible from the Qtune servers. The 'jitsiRoomAdminTag' property cannot be read from local maps."
                             );
                         }
                     }
@@ -971,7 +971,7 @@ export class GameRoom implements BrothersFinder {
                         for (const roomListener of this.roomListeners) {
                             emitErrorOnRoomSocket(
                                 roomListener,
-                                "Your map does not seem accessible from the WorkAdventure servers. Is it behind a firewall or a proxy? Your map should be accessible from the WorkAdventure servers. The 'bbbMeetingAdminTag' property cannot be read from local maps."
+                                "Your map does not seem accessible from the Qtune servers. Is it behind a firewall or a proxy? Your map should be accessible from the Qtune servers. The 'bbbMeetingAdminTag' property cannot be read from local maps."
                             );
                         }
                     }
@@ -1071,7 +1071,7 @@ export class GameRoom implements BrothersFinder {
                             for (const roomListener of this.roomListeners) {
                                 emitErrorOnRoomSocket(
                                     roomListener,
-                                    "Your map does not seem accessible from the WorkAdventure servers. Is it behind a firewall or a proxy? Your map should be accessible from the WorkAdventure servers. If you use the scripting API in this map, please be aware that server-side checks and muc persistence is disabled."
+                                    "Your map does not seem accessible from the Qtune servers. Is it behind a firewall or a proxy? Your map should be accessible from the Qtune servers. If you use the scripting API in this map, please be aware that server-side checks and muc persistence is disabled."
                                 );
                             }
                         }, 1000);

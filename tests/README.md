@@ -23,7 +23,7 @@ If you change the scripting API, you will need to re-run this command.
 
 ## Run on development environment
 
-Start WorkAdventure with:
+Start Qtune with:
 
 ```bash
 docker-compose -f docker-compose.yaml -f docker-compose-oidc.yaml up -d
@@ -46,7 +46,7 @@ npm run test-headed -- tests/[your_test_file.ts]
 
 ## Run on production like environment
 
-Start WorkAdventure with:
+Start Qtune with:
 
 ```bash
 COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose -f docker-compose.yaml -f docker-compose-oidc.yaml -f docker-compose.e2e.yml up -d --build

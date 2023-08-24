@@ -1,6 +1,6 @@
-# WorkAdventure containers explained
+# Qtune containers explained
 
-This document explains the services that WorkAdventure is made of and the communication
+This document explains the services that Qtune is made of and the communication
 between those different components.
 
 ```mermaid
