@@ -4,6 +4,7 @@
     import { fly } from "svelte/transition";
     import { onDestroy, onMount } from "svelte";
     import { writable } from "svelte/store";
+    import { Subscription } from "rxjs";
     import { requestedScreenSharingState } from "../../Stores/ScreenSharingStore";
     import {
         cameraListStore,
@@ -184,10 +185,12 @@
             return;
         }
 
+        analyticsClient.startMegaphone();
         streamingMegaphoneStore.set(true);
     }
 
     function toggleMapEditorMode() {
+        if (isMobile) return;
         analyticsClient.toggleMapEditor(!$mapEditorModeStore);
         mapEditorModeStore.switchMode(!$mapEditorModeStore);
     }
@@ -357,14 +360,19 @@
     }
 
     let subscribers = new Array<Unsubscriber>();
+    let chatTotalMessagesSubscription: Subscription | undefined;
     let totalMessagesToSee = writable<number>(0);
     onMount(() => {
-        iframeListener.chatTotalMessagesToSeeStream.subscribe((total) => totalMessagesToSee.set(total));
+        chatTotalMessagesSubscription = iframeListener.chatTotalMessagesToSeeStream.subscribe((total) =>
+            totalMessagesToSee.set(total)
+        );
+        resizeObserver.observe(mainHtmlDiv);
     });
 
     onDestroy(() => {
         subscribers.map((subscriber) => subscriber());
         unsubscribeLocalStreamStore();
+        chatTotalMessagesSubscription?.unsubscribe();
     });
 
     let stream: MediaStream | null;
@@ -386,12 +394,19 @@
         }
     });
 
-    const isMobile = isMediaBreakpointUp("md");
-
     function buttonActionBarTrigger(id: string) {
         const button = $additionnalButtonsMenu.get(id) as AddButtonActionBarEvent;
         return iframeListener.sendButtonActionBarTriggered(button);
     }
+
+    let mainHtmlDiv: HTMLDivElement;
+    let isMobile = isMediaBreakpointUp("md");
+    const resizeObserver = new ResizeObserver(() => {
+        isMobile = isMediaBreakpointUp("md");
+        if (isMobile) {
+            mapEditorModeStore.set(false);
+        }
+    });
 </script>
 
 <svelte:window on:keydown={onKeyDown} />
@@ -399,6 +414,7 @@
 <div
     class="tw-flex tw-justify-center tw-m-auto tw-absolute tw-left-0 tw-right-0 tw-bottom-0"
     class:animated={$bottomActionBarVisibilityStore}
+    bind:this={mainHtmlDiv}
 >
     <div class="bottom-action-bar tw-absolute">
         {#if $bottomActionBarVisibilityStore}
@@ -556,7 +572,7 @@
                                     style="bottom: 15px;right: 0;"
                                     on:mouseleave={() => (cameraActive = false)}
                                 >
-                                    {#each $cameraListStore as camera}
+                                    {#each $cameraListStore as camera (camera.deviceId)}
                                         <!-- svelte-ignore a11y-click-events-have-key-events -->
                                         <span
                                             class="wa-dropdown-item tw-flex"
@@ -628,7 +644,7 @@
                                         <span class="tw-underline tw-font-bold tw-text-xs tw-p-1"
                                             >{$LL.actionbar.subtitle.microphone()} 🎙️</span
                                         >
-                                        {#each $microphoneListStore as microphone}
+                                        {#each $microphoneListStore as microphone (microphone.deviceId)}
                                             <span
                                                 class="wa-dropdown-item"
                                                 on:click={() => {
@@ -650,7 +666,7 @@
                                         <span class="tw-underline tw-font-bold tw-text-xs tw-p-1"
                                             >{$LL.actionbar.subtitle.speaker()} 🔈</span
                                         >
-                                        {#each $speakerListStore as speaker}
+                                        {#each $speakerListStore as speaker (speaker.deviceId)}
                                             <span
                                                 class="wa-dropdown-item"
                                                 on:click={() => {
@@ -795,13 +811,24 @@
                         on:click={toggleMapEditorMode}
                         class="bottom-action-button"
                     >
-                        <Tooltip text={$LL.actionbar.mapEditor()} />
+                        {#if isMobile}
+                            <Tooltip text={$LL.actionbar.mapEditorMobileLocked()} />
+                        {:else}
+                            <Tooltip text={$LL.actionbar.mapEditor()} />
+                        {/if}
                         <button
                             id="mapEditorIcon"
-                            class:border-top-light={$mapEditorModeStore}
+                            class:border-top-light={$mapEditorModeStore && !isMobile}
                             name="toggle-map-editor"
+                            disabled={isMobile}
                         >
-                            <img draggable="false" src={mapBuilder} style="padding: 2px" alt="toggle-map-editor" />
+                            <img
+                                draggable="false"
+                                src={mapBuilder}
+                                class:disable-opacity={isMobile}
+                                style="padding: 2px"
+                                alt="toggle-map-editor"
+                            />
                         </button>
                     </div>
                 {/if}
@@ -824,7 +851,7 @@
 
             {#if $addActionButtonActionBarEvent.length > 0}
                 <div class="bottom-action-section tw-flex tw-flex-initial">
-                    {#each $addActionButtonActionBarEvent as button}
+                    {#each $addActionButtonActionBarEvent as button (button.id)}
                         <!-- svelte-ignore a11y-click-events-have-key-events -->
                         <div
                             in:fly={{}}
@@ -896,7 +923,7 @@
 				</div>
 			{/if}
 			-->
-            {#each $addClassicButtonActionBarEvent as button}
+            {#each $addClassicButtonActionBarEvent as button (button.id)}
                 <!-- svelte-ignore a11y-click-events-have-key-events -->
                 <div
                     class="bottom-action-section tw-flex tw-flex-initial"
@@ -923,7 +950,7 @@
     >
         <div class="bottom-action-bar">
             <div class="bottom-action-section tw-flex animate">
-                {#each [...$emoteDataStore.keys()] as key}
+                {#each [...$emoteDataStore.keys()] as key (key)}
                     <div class="tw-transition-all bottom-action-button">
                         <button
                             on:click={() => {
